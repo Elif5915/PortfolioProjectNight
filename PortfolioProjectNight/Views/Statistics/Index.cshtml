@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h2 class="mb-4">İstatistikler</h2>
+
+<div class="alert alert-success"> Toplam mesaj sayısı: <b>@ViewBag.totalMessageCount</b></div>
+<div class="alert alert-danger"> Okunmuş mesaj sayısı: <b>@ViewBag.messageIsReadTrueCount</b></div>
+<div class="alert alert-warning"> Okunmamış mesaj sayısı: <b>@ViewBag.messageIsReadFalseCount</b></div>
+
+<div class="alert alert-dark"> Yetenek sayısı: <b>@ViewBag.skillCount</b></div>
+<div class="alert alert-info"> Yetenek toplam puanı: <b>@ViewBag.skillRateSum</b></div>
+<div class="alert alert-primary"> Yeteneklerin ortalama puanı: <b>@ViewBag.skillRateAvg</b></div>
+
+<div class="alert alert-primary" style="background-color:orange"> En yüksek puanlı yetenek: <b>@ViewBag.maxRateSkillName</b></div>
+<div class="alert alert-primary" style="background-color:darkcyan"> Referans konulu mesaj sayısı: <b>@ViewBag.getMessageCountBySubjectReferance</b></div>
+<div class="alert alert-primary" style="background-color:hotpink"> İçinde h harfi olan okunmuş mesaj sayısı: <b>@ViewBag.getMessageCountByEmailContainHAndIsreadTrue</b></div>
+<div class="alert alert-primary" style="background-color:chocolate"> Değeri 80 olan yetenek ismi: <b>@ViewBag.getSkillNameByRate80</b></div>
+
+
