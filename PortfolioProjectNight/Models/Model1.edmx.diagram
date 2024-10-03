@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="de5478c1c09d4fe1917ff3e99b81e2ca" Name="Diagram1">
-        <EntityTypeShape EntityType="DbMyPortfolioNightModel.About" Width="1.5" PointX="0.625" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMyPortfolioNightModel.About" Width="1.5" PointX="0.5" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DbMyPortfolioNightModel.Category" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DbMyPortfolioNightModel.Contact" Width="1.5" PointX="3.25" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DbMyPortfolioNightModel.Education" Width="1.5" PointX="2.625" PointY="4.125" IsExpanded="true" />

@@ -10,8 +10,9 @@
             <PropertyRef Name="AboutId" />
           </Key>
           <Property Name="AboutId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="50" />
-          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Title" Type="nvarchar" MaxLength="500" />
+          <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ImageUrl" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Admin">
           <Key>
@@ -87,6 +88,9 @@
           <Property Name="Phone" Type="nvarchar" MaxLength="30" />
           <Property Name="Github" Type="nvarchar" MaxLength="50" />
           <Property Name="Address" Type="nvarchar" MaxLength="120" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="ImageUrl" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Service">
           <Key>
@@ -104,6 +108,8 @@
           <Property Name="SkillId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SkillName" Type="nvarchar" MaxLength="50" />
           <Property Name="Rate" Type="tinyint" />
+          <Property Name="Icon" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="SocialMedia">
           <Key>
@@ -164,8 +170,9 @@
             <PropertyRef Name="AboutId" />
           </Key>
           <Property Name="AboutId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -235,6 +242,9 @@
           <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Github" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Service">
           <Key>
@@ -252,6 +262,8 @@
           <Property Name="SkillId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SkillName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Rate" Type="Byte" />
+          <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
         <EntityType Name="SocialMedia">
           <Key>
@@ -320,6 +332,7 @@
           <EntitySetMapping Name="About">
             <EntityTypeMapping TypeName="DbMyPortfolioNightModel.About">
               <MappingFragment StoreEntitySet="About">
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
                 <ScalarProperty Name="AboutId" ColumnName="AboutId" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -391,6 +404,9 @@
           <EntitySetMapping Name="Profile">
             <EntityTypeMapping TypeName="DbMyPortfolioNightModel.Profile">
               <MappingFragment StoreEntitySet="Profile">
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="ProfileId" ColumnName="ProfileId" />
                 <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
@@ -413,6 +429,8 @@
           <EntitySetMapping Name="Skill">
             <EntityTypeMapping TypeName="DbMyPortfolioNightModel.Skill">
               <MappingFragment StoreEntitySet="Skill">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
                 <ScalarProperty Name="SkillId" ColumnName="SkillId" />
                 <ScalarProperty Name="SkillName" ColumnName="SkillName" />
                 <ScalarProperty Name="Rate" ColumnName="Rate" />
