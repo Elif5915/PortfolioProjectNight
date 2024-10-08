@@ -86,5 +86,10 @@ namespace PortfolioProjectNight.Controllers
             return PartialView(edu);
         }
         
+        public PartialViewResult PartialInternShip()
+        {
+            var staj = context.InternShip.ToList();
+            return PartialView(staj);
+        }
     }
 }
