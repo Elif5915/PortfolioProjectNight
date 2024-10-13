@@ -91,5 +91,23 @@ namespace PortfolioProjectNight.Controllers
             var staj = context.InternShip.ToList();
             return PartialView(staj);
         }
+
+        public PartialViewResult PartialService()
+        {
+            var service = context.Service.ToList();
+            return PartialView(service);
+        }
+
+        public PartialViewResult PartialPortfolio()
+        {
+            var values = context.Expertise.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult PartialReference()
+        {
+            var reference = context.Reference.ToList();
+            return PartialView(reference);
+        }
     }
 }

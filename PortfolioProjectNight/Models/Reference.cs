@@ -12,9 +12,9 @@ namespace PortfolioProjectNight.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Feature
+    public partial class Reference
     {
-        public int FeatureId { get; set; }
+        public int ReferenceId { get; set; }
         public string Title { get; set; }
         public string NameSurname { get; set; }
         public string SubTitle { get; set; }
