@@ -9,7 +9,7 @@ namespace PortfolioProjectNight.Controllers
     public class InternShipController : Controller
     {
         // GET: InterShip
-        public ActionResult Index()
+        public ActionResult InterShipList()
         {
             return View();
         }

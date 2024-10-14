@@ -531,6 +531,7 @@
     <Content Include="Views\Default\PartialService.cshtml" />
     <Content Include="Views\Default\PartialReference.cshtml" />
     <Content Include="Views\Default\PartialPortfolio.cshtml" />
+    <Content Include="Views\Education\updateEducation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

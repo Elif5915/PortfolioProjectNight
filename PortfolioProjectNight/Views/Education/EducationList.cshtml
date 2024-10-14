@@ -1,4 +1,5 @@
-﻿
+﻿@model List<PortfolioProjectNight.Models.Education>
+
 @{
     ViewBag.Title = "EducationList";
     Layout = "~/Views/Admin/Index.cshtml";
@@ -9,20 +10,27 @@
 <table class="table table-bordered">
     <tr>
         <th>Id</th>
+        <th>Tarih</th>
         <th>Başlık</th>
         <th>Alt Başlık</th>
         <th></th>
-        
+
     </tr>
-    <tr>
-        <td>1</td>
-        <td>Kütahya Dumlupınar Üniverisitesi</td>
-        <td>Bilgisayar Mühendisliği</td>
-        <td><a href="#" class="btn btn-danger">Sil</a>
-            <a href="#" class="btn btn-info">Güncelle</a>
-        </td>
-        
-    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EducationId</td>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
+            <td>@item.Description</td>
+            <td>
+                <a href="/Education/deleteEducation/@item.EducationId" class="btn btn-danger">Sil</a>
+                <a href="/Education/updateEducation/@item.EducationId" class="btn btn-info">Güncelle</a>
+            </td>
+
+        </tr>
+    }
+
 </table>
 
 <a href="/Education/CreateEducation" class="btn btn-info">Yeni Eğitim Bilgisi Girişi</a>
