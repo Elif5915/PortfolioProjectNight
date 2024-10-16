@@ -138,6 +138,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InternShipController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -532,6 +533,10 @@
     <Content Include="Views\Default\PartialReference.cshtml" />
     <Content Include="Views\Default\PartialPortfolio.cshtml" />
     <Content Include="Views\Education\updateEducation.cshtml" />
+    <Content Include="Views\InternShip\InternShipList.cshtml" />
+    <Content Include="Views\InternShip\createInternShip.cshtml" />
+    <Content Include="Views\InternShip\updateInternShip.cshtml" />
+    <Content Include="Views\Service\ServiceList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

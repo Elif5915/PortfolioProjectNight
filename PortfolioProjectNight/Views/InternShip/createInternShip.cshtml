@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "createInternShip";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Yeni Staj Bilgisi Girişi</h2>
+
+<form method="post">
+    <label>Tarih</label>
+    <input type="text" name="Description" class="form-control" />
+    <br />
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <textarea rows="3" name="SubTitle" class="form-control"></textarea>
+    <br />
+    <button class="btn btn-info">Staj Bilgisini Kaydet</button>
+</form>

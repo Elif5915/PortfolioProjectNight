@@ -1,0 +1,22 @@
+﻿@model PortfolioProjectNight.Models.InternShip
+@{
+    ViewBag.Title = "updateInternShip";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h2>Staj Bilgileri Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.InternShipId)
+    <label>Tarih</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Staj Bilgisini Güncelle</button>
+</form>
