@@ -1,4 +1,5 @@
-﻿@model List<PortfolioProjectNight.Models.Skill>
+﻿
+@model List<PortfolioProjectNight.Models.Skill>
 
 @{
     ViewBag.Title = "SkillList";
@@ -13,7 +14,7 @@
         <th>Başlık</th>
         <th>Değer</th>
         <th style="width: 200px"></th>
-        
+
     </tr>
 
     @foreach (var item in Model)
@@ -22,7 +23,8 @@
             <td>@item.SkillId</td>
             <td>@item.SkillName</td>
             <td>@item.Rate</td>
-            <td><a href="/Skill/deleteSkill/@item.SkillId" class="btn btn-danger">Sil</a>
+            <td>
+                <a href="/Skill/deleteSkill/@item.SkillId" class="btn btn-danger">Sil</a>
                 <a href="/Skill/updateSkill/@item.SkillId" class="btn btn-info">Güncelle</a>
             </td>
         </tr>

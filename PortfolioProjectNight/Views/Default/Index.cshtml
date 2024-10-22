@@ -77,18 +77,18 @@
                                                         <label for="email">Email Adresiniz</label>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-12 col-xl-6">
+                                                <div class="col-lg-12">
                                                     <div class="form-floating">
                                                         @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
-                                                        <label for="phone">Kategori</label>
+                                                        <label for="phone">Mesaj Konusu</label>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-12 col-xl-6">
+                                                @*<div class="col-lg-12 col-xl-6">
                                                     <div class="form-floating">
                                                         <input type="text" class="form-control border-0" id="project" name="Subject" placeholder="Mesaj Konusu">
                                                         <label for="project">Mesaj Konusu</label>
                                                     </div>
-                                                </div>
+                                                </div>*@
                                                 <div class="col-12">
                                                     <div class="form-floating">
                                                         <input type="text" class="form-control border-0" id="message" name="Message" placeholder="Mesajınızı Yazın">
