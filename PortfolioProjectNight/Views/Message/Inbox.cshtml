@@ -6,6 +6,8 @@
     int count = 0;
 }
 
+@{string renk = ""; }
+
 <table class="table table-bordered">
     <tr>
         <th>#</th>
@@ -15,30 +17,62 @@
         <th>Durum</th>
         <th></th>
     </tr>
-    @foreach(var item in Model)
+    @foreach (var item in Model)
     {
         count++;
 
-<tr>
-    <td>@count</td>
-    <td>@item.NameSurname</td>
-    <td>@item.SendDate</td>
-    <td>@item.Subject</td>
+        if (item.CategoryId == 1)
+        {
+            renk = "badge bg-primary";
+        }
+        else if (item.CategoryId == 2)
+        {
+            renk = "badge bg-info";
+        }
+        else if (item.CategoryId == 3)
+        {
+            renk = "badge bg-success";
+        }
+        else if (item.CategoryId == 4)
+        {
+            renk = "badge bg-warning";
+        }
+        else if (item.CategoryId == 5)
+        {
+            renk = "badge bg-warning";
+        }
+        else if (item.CategoryId == 6)
+        {
+            renk = "badge bg-success";
+        }
+        else if (item.CategoryId == 7)
+        {
+            renk = "badge bg-info";
+        }
+        else if(item.CategoryId == 8)
+        {
+            renk = "badge bg-info";
+        }
+        <tr>
+            <td>@count</td>
+            <td>@item.NameSurname</td>
+            <td>@item.SendDate</td>
+            <td><span class="@renk">@item.Subject</span></td>
 
-    @if (@item.IsRead == false)
-    {
-        <td><a href="/Message/changeMessageStatusToTrue/@item.ContactId" class="btn btn-dark">Okundu Olarak İşaretle</a></td>
+            @if (@item.IsRead == false)
+            {
+                <td><a href="/Message/changeMessageStatusToTrue/@item.ContactId" class="btn-sm btn-dark">Okunmadı</a></td>
+            }
+            else
+            {
+                <td><a href="/Message/changeMessageStatusToFalse/@item.ContactId" class="btn-sm btn-info">Okundu</a></td>
+            }
+
+            <td>
+                <a href="#" class="btn-sm btn-warning">Mesajı Aç</a>
+                <a href="#" class="btn-sm btn-danger">Mesajı Sil</a>
+            </td>
+        </tr>
+
     }
-    else
-    {
-        <td><a href="/Message/changeMessageStatusToFalse/@item.ContactId" class="btn btn-info">Okunmadı Olarak İşaretle</a></td>
-    }
-
-    <td>
-        <a href="#" class="btn btn-warning">Mesajı Aç</a>
-        <a href="#" class="btn btn-warning">Mesajı Sil</a>
-    </td>
-</tr>
-
-     }
 </table>

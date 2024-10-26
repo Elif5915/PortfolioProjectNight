@@ -31,5 +31,6 @@ namespace PortfolioProjectNight.Controllers
             context.SaveChanges();
             return RedirectToAction("Inbox");
         }
+
     }
 }
