@@ -1,5 +1,7 @@
-﻿
-@model List<PortfolioProjectNight.Models.Skill>
+﻿@using PagedList
+@using PagedList.Mvc
+
+@model  IPagedList<PortfolioProjectNight.Models.Skill>
 
 @{
     ViewBag.Title = "SkillList";
@@ -32,5 +34,62 @@
     }
 
 </table>
-<a href="/Skill/createSkill" class="btn btn-dark">Yeni Yetenek Ekle</a>
 
+<div class="action-pagination-container">
+    <a href="/Skill/createSkill" class="btn btn-dark">Yeni Yetenek Ekle</a>
+    <div class="pagination-wrapper">
+        @Html.PagedListPager(Model, page => Url.Action("SkillList", new { page }))
+    </div>
+</div>
+
+<style>
+    .action-pagination-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .pagination-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .pagination {
+        display: flex;
+        list-style-type: none;
+    }
+
+        .pagination li {
+            margin: 0 5px;
+        }
+
+            .pagination li a, .pagination li span {
+                display: block;
+                padding: 8px 12px;
+                background-color: dimgray;
+                color: white;
+                text-decoration: none;
+                border-radius: 10px;
+                transition: background-color 0.3s ease;
+            }
+
+                .pagination li a:hover {
+                    background-color: slategrey;
+                }
+
+            .pagination li.active span {
+                background-color: #0056b3;
+                font-weight: bold;
+            }
+
+            .pagination li.disabled span {
+                background-color: #ccc;
+                cursor: not-allowed;
+            }
+
+            .pagination li.active span, .pagination li.disabled span {
+                color: white;
+            }
+</style>
