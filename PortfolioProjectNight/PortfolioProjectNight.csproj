@@ -544,6 +544,7 @@
     <Content Include="Views\InternShip\createInternShip.cshtml" />
     <Content Include="Views\InternShip\updateInternShip.cshtml" />
     <Content Include="Views\Service\ServiceList.cshtml" />
+    <Content Include="Views\Message\openDetailMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

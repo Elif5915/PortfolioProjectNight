@@ -32,5 +32,25 @@ namespace PortfolioProjectNight.Controllers
             return RedirectToAction("Inbox");
         }
 
+        public ActionResult deleteMessage(int id)
+        {
+            var message = context.Contact.Find(id);
+            context.Contact.Remove(message);
+            context.SaveChanges();
+
+            return RedirectToAction("Inbox");
+        }
+
+        public ActionResult openDetailMessage(int id)
+        {
+            var value = context.Contact.Find(id);
+            if(value.IsRead == false)
+            {
+                value.IsRead = true;
+            }
+            context.SaveChanges();
+            return View(value);
+        }
+
     }
 }
