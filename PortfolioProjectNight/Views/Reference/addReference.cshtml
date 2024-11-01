@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "addReference";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Yeni Referans Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Çalıştığı İş Yeri Bilgisi</label>
+    <input type="text" name="Title" class="form-control" />
+    <br />
+    <label>Ad Soyad</label>
+    <input type="text" name="NameSurname" class="form-control" />
+    <br />
+    <label>Pozisyon</label>
+    <textarea rows="3" name="SubTitle" class="form-control"></textarea>
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
+

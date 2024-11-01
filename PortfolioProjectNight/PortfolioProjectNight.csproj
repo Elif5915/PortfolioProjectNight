@@ -144,6 +144,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InternShipController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\ReferenceController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
@@ -545,6 +546,9 @@
     <Content Include="Views\InternShip\updateInternShip.cshtml" />
     <Content Include="Views\Service\ServiceList.cshtml" />
     <Content Include="Views\Message\openDetailMessage.cshtml" />
+    <Content Include="Views\Reference\ReferenceList.cshtml" />
+    <Content Include="Views\Reference\addReference.cshtml" />
+    <Content Include="Views\Reference\updateReference.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

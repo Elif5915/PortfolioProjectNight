@@ -1,0 +1,22 @@
+﻿@model PortfolioProjectNight.Models.Reference 
+@{
+    ViewBag.Title = "updateReference";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>Referans Bilgileri Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ReferenceId)
+    <label>Çalıştığı İş Yeri Bilgisi</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    <label>Pozisyon</label>
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Referans Bilgisini Güncelle</button>
+</form>
+

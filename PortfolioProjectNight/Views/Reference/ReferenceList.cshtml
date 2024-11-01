@@ -1,0 +1,36 @@
+﻿@model List<PortfolioProjectNight.Models.Reference>
+@{
+    ViewBag.Title = "ReferenceList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4"> Referanslarım </h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ReferenceId</td>
+            <td>@item.Title</td>
+            <td>@item.NameSurname</td>
+            <td>@item.SubTitle</td>
+            <td>
+                <a href="/Reference/deleteReference/@item.ReferenceId" class="btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                <a href="/Reference/updateReference/@item.ReferenceId" class="btn-sm btn-info"><i class="fa fa-pencil"></i></a>
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+<a href="/Reference/addReference" class="btn btn-info">Referans Ekle</a>
+

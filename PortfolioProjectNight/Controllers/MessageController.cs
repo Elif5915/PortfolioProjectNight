@@ -44,7 +44,7 @@ namespace PortfolioProjectNight.Controllers
         public ActionResult openDetailMessage(int id)
         {
             var value = context.Contact.Find(id);
-            if(value.IsRead == false)
+           if(value.IsRead == false)
             {
                 value.IsRead = true;
             }
