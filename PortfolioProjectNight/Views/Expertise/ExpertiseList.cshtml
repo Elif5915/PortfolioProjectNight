@@ -1,0 +1,35 @@
+﻿@model List<PortfolioProjectNight.Models.Expertise>
+
+@{
+    ViewBag.Title = "ExpertiseList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+
+<h2 class="mb-4">Projelerim</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Proje İsmi</th>
+        <th>Durumu</th>
+        <th></th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ExpertiseId</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>
+                <a href="/Expertise/deleteExpertise/@item.ExpertiseId" class="btn btn-danger">Sil</a>
+                <a href="/Expertise/updateExpertise/@item.ExpertiseId" class="btn btn-info">Güncelle</a>
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+<a href="/Expertise/CreateExpertise" class="btn btn-info">Yeni Proje Ekle</a>

@@ -141,6 +141,7 @@
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\Entities.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
+    <Compile Include="Controllers\ExpertiseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InternShipController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
@@ -549,6 +550,9 @@
     <Content Include="Views\Reference\ReferenceList.cshtml" />
     <Content Include="Views\Reference\addReference.cshtml" />
     <Content Include="Views\Reference\updateReference.cshtml" />
+    <Content Include="Views\Expertise\ExpertiseList.cshtml" />
+    <Content Include="Views\Expertise\CreateExpertise.cshtml" />
+    <Content Include="Views\Expertise\updateExpertise.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
