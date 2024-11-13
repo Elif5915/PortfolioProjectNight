@@ -15,6 +15,9 @@ namespace PortfolioProjectNight.Controllers
             ViewBag.eduCount = entities.Education.Count();
             ViewBag.skill = entities.Skill.Count();
             ViewBag.service = entities.Service.Count();
+            ViewBag.exp = entities.Experience.Count();
+            ViewBag.reference = entities.Reference.Count();
+            ViewBag.app = entities.Expertise.Count();
             return View();
         }
     }

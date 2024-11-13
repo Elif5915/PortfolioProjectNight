@@ -4,14 +4,18 @@
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
 
 <div id="root">
     <div class="container pt-5">
         <div class="row align-items-stretch">
 
             <div class="c-dashboardInfo col-lg-3 col-md-6">
-                <div class="card" style="width:200px">
-                    <img class="card-img-top" src="https://www.evrensel.net/images/840/upload/dosya/98866.jpg" alt="Card image">
+                <div class="card fixed-card">
+                    <img class="card-img-top fixed-img" src="https://www.evrensel.net/images/840/upload/dosya/98866.jpg" alt="Card image">
                     <div class="card-body">
                         <h4 class="text-center">Eğitimlerim</h4>
                         <p class="text-center"> <b>@ViewBag.eduCount</b></p>
@@ -19,8 +23,8 @@
                 </div>
             </div>
             <div class="c-dashboardInfo col-lg-3 col-md-6">
-                <div class="card" style="width:200px">
-                    <img class="card-img-top" src="https://idenfit.com/blog/wp-content/uploads/2020/09/yetenek-y%C3%B6netimi@3x.png" alt="Card image">
+                <div class="card fixed-card">
+                    <img class="card-img-top fixed-img" src="https://idenfit.com/blog/wp-content/uploads/2020/09/yetenek-y%C3%B6netimi@3x.png" alt="Card image">
                     <div class="card-body">
                         <h4 class="text-center">Hizmetlerim</h4>
                         <p class="text-center"> <b>@ViewBag.service</b></p>
@@ -28,36 +32,79 @@
                 </div>
             </div>
             <div class="c-dashboardInfo col-lg-3 col-md-6">
-                    <div class="card" style="width:200px">
-                        <img class="card-img-top" src="https://www.marketingturkiye.com.tr/wp-content/uploads/2023/04/yetenek-krizi-800x450.jpg.webp" alt="Card image">
-                        <div class="card-body">
-                            <h4 class="text-center">Yeteneklerim</h4>
-                            <p class="text-center"> <b>@ViewBag.skill</b></p>
-                        </div>
+                <div class="card fixed-card">
+                    <img class="card-img-top fixed-img" src="https://www.marketingturkiye.com.tr/wp-content/uploads/2023/04/yetenek-krizi-800x450.jpg.webp" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="text-center">Yeteneklerim</h4>
+                        <p class="text-center"> <b>@ViewBag.skill</b></p>
                     </div>
+                </div>
             </div>
-
+            <div class="c-dashboardInfo col-lg-3 col-md-6">
+                <div class="card fixed-card">
+                    <img class="card-img-top fixed-img" src="https://1618.agency/Content/upload/DENEYI%CC%87M-PAZARLAMASI-1.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="text-center">Deneyimlerim</h4>
+                        <p class="text-center"> <b>@ViewBag.exp</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-dashboardInfo col-lg-3 col-md-6">
+                <div class="card fixed-card">
+                    <img class="card-img-top fixed-img" src="https://i.dunya.com/storage/old/files/2018/2/26/405036/405036.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="text-center">Referanslarım</h4>
+                        <p class="text-center"> <b>@ViewBag.reference</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-dashboardInfo col-lg-3 col-md-6">
+                <div class="card fixed-card">
+                    <img class="card-img-top fixed-img" src="https://mochatouch.com.tr/wp-content/uploads/2024/01/proje-yoneticisi-1024x1024.webp" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="text-center">Projelerim</h4>
+                        <p class="text-center"> <b>@ViewBag.app</b></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-
 
 <style>
     .c-dashboardInfo {
         margin-bottom: 15px;
     }
 
-        .c-dashboardInfo .wrap {
-            background: #ffffff;
-            box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 7px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            padding: 40px 25px 20px;
-            height: 100%;
-        }
+    /* Kartların aynı yüksekliğe ve genişliğe sahip olması için */
+    .fixed-card {
+        width: 100%; /* Tüm genişliği kapsar */
+        height: 100%; /* Kartların yüksekliği aynı olur */
+        max-width: 220px; /* Maksimum genişlik ayarlanır */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    /* Görsellerin kart boyutuna göre uyumlu olması için */
+    .fixed-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover; /* Görsellerin kart içinde tamamen görünmesi için */
+    }
+
+    .c-dashboardInfo .wrap {
+        background: #ffffff;
+        box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 7px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        padding: 40px 25px 20px;
+        height: 100%;
+    }
 
     .c-dashboardInfo__title,
     .c-dashboardInfo__subInfo {
@@ -96,18 +143,6 @@
 
     .c-dashboardInfo:nth-child(3) .wrap:after {
         background: linear-gradient(69.83deg, #0084f4 0%, #00c48c 100%);
-    }
-
-    .c-dashboardInfo:nth-child(4) .wrap:after {
-        background: linear-gradient(81.67deg, #ff647c 0%, #1f5dc5 100%);
-    }
-
-    .c-dashboardInfo:nth-child(5) .wrap:after {
-        background: linear-gradient(69.83deg, #f39c12 0%, #e67e22 100%);
-    }
-
-    .c-dashboardInfo:nth-child(6) .wrap:after {
-        background: linear-gradient(81.67deg, #8e44ad 0%, #9b59b6 100%);
     }
 
     .c-dashboardInfo__title svg {

@@ -97,9 +97,9 @@
             <PropertyRef Name="ReferenceId" />
           </Key>
           <Property Name="ReferenceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="50" />
-          <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
-          <Property Name="SubTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="NameSurname" Type="nvarchar" MaxLength="200" />
+          <Property Name="SubTitle" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="Service">
           <Key>
@@ -126,8 +126,9 @@
           </Key>
           <Property Name="SocialMediaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
-          <Property Name="Url" Type="nvarchar" MaxLength="100" />
+          <Property Name="Url" Type="nvarchar" MaxLength="4000" />
           <Property Name="Icon" Type="nvarchar" MaxLength="250" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -272,8 +273,9 @@
           </Key>
           <Property Name="SocialMediaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Url" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
           <Property Name="Icon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -339,9 +341,9 @@
             <PropertyRef Name="ReferenceId" />
           </Key>
           <Property Name="ReferenceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SubTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NameSurname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -450,6 +452,7 @@
           <EntitySetMapping Name="SocialMedia">
             <EntityTypeMapping TypeName="DbMyPortfolioNightModel.SocialMedia">
               <MappingFragment StoreEntitySet="SocialMedia">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="SocialMediaId" ColumnName="SocialMediaId" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Url" ColumnName="Url" />

@@ -149,6 +149,7 @@
     <Compile Include="Controllers\ReferenceController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
+    <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -561,6 +562,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\InterShip\" />
+    <Folder Include="Views\SocialMedia\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
