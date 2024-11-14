@@ -1,0 +1,20 @@
+﻿@model  PortfolioProjectNight.Models.SocialMedia
+@{
+    ViewBag.Title = "UpdateSocialMedia";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+<h2>Sosyal Medya Bilgileri Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.SocialMediaId)
+    <label>Sosyal Medya</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Link</label>
+    @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
+    <br />
+    <label>Kullanım Durumu</label>
+    @Html.TextBoxFor(x => x.Status, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Sosyal Medya Bilgisini Güncelle</button>
+</form>
