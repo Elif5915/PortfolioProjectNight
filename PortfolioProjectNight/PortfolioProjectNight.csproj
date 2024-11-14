@@ -558,6 +558,9 @@
     <Content Include="Views\Service\CreateService.cshtml" />
     <Content Include="Views\Service\UpdateService.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Default\PartialSocialMediaHeader.cshtml" />
+    <Content Include="Views\Default\PartialSocialMediaFooter.cshtml" />
+    <Content Include="Views\Default\PartialSocialMediaAbout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

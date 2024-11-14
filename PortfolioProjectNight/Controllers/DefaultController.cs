@@ -109,5 +109,23 @@ namespace PortfolioProjectNight.Controllers
             var reference = context.Reference.ToList();
             return PartialView(reference);
         }
+
+        public PartialViewResult PartialSocialMediaHeader()
+        {
+            var values = context.SocialMedia.Where(x => x.Status == true).ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult PartialSocialMediaFooter()
+        {
+            var values = context.SocialMedia.Where(x => x.Status == true).ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult PartialSocialMediaAbout()
+        {
+            var values = context.SocialMedia.Where(x => x.Status == true).ToList();
+            return PartialView(values);
+        }
     }
 }
