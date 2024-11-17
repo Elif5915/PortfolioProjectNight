@@ -66,13 +66,13 @@
         <h2>Kullanıcı Arayüzü</h2>
     </section>
     
-    ![user1](https://github.com/user-attachments/assets/ab683517-bbe7-442f-8b95-9e128b194661)
-    ![user2](https://github.com/user-attachments/assets/3e4d37da-0565-4957-a808-42559d797ffd)
-    ![user3](https://github.com/user-attachments/assets/ae67e95a-7e81-4161-a9b4-caab51c27e2e)
-    ![user4](https://github.com/user-attachments/assets/b1f5ca19-c605-43c9-9db0-b91dfe1e4422)
-    ![user5](https://github.com/user-attachments/assets/4e67c05d-6398-4e77-922a-d88e3de56685)
-    ![user6](https://github.com/user-attachments/assets/d4c6a793-1449-4e78-a50c-4de1e33441d9)
-    ![user7](https://github.com/user-attachments/assets/2c4a0ee9-f37f-451a-8663-a9ab22412b6f)
+    ![user1](https://github.com/user-attachments/assets/ab683517-bbe7-442f-8b95-9e128b194661).
+    ![user2](https://github.com/user-attachments/assets/3e4d37da-0565-4957-a808-42559d797ffd).
+    ![user3](https://github.com/user-attachments/assets/ae67e95a-7e81-4161-a9b4-caab51c27e2e).
+    ![user4](https://github.com/user-attachments/assets/b1f5ca19-c605-43c9-9db0-b91dfe1e4422).
+    ![user5](https://github.com/user-attachments/assets/4e67c05d-6398-4e77-922a-d88e3de56685).
+    ![user6](https://github.com/user-attachments/assets/d4c6a793-1449-4e78-a50c-4de1e33441d9).
+    ![user7](https://github.com/user-attachments/assets/2c4a0ee9-f37f-451a-8663-a9ab22412b6f).
 
 <section>
       <h2>Admin Arayüzü</h2>
