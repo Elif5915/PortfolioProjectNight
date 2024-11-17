@@ -64,9 +64,15 @@
 
    <section>
         <h2>Kullanıcı Arayüzü</h2>
-    </section>
+   </section>
+   
 ![user1](https://github.com/user-attachments/assets/9f563d77-50a1-43ce-b7e8-a55caf3820d8)
 ![user2](https://github.com/user-attachments/assets/8a1f0b67-1d31-4c65-ae09-1e28f8ebbdda)
+![user3](https://github.com/user-attachments/assets/29757e01-9b9b-414b-a76d-30f2d3a8c39f)
+![user4](https://github.com/user-attachments/assets/57aca727-5dba-48f3-9254-7309e64725d6)
+![user5](https://github.com/user-attachments/assets/690f73cf-59b8-451f-85b3-0a889e029ae2)
+![user6](https://github.com/user-attachments/assets/d9956911-ea4e-41a7-9947-5dd025d7d2dd)
+![user7](https://github.com/user-attachments/assets/09bbb871-f77f-43ad-86c7-b5aa028d4a0d)
 
 
 <section>
